@@ -44,9 +44,13 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <script src="index.js"></script>
   <script>
+    // checks if there is a service worker and runs function if one is found
     if("serviceWorker" in navigator) {
+      // waits for page to load before running service worker to improve UI
       window.addEventListener("load", () => {
+        // registers service worker
         navigator.serviceWorker.register("service-worker.js").then(reg => {
+          // console logs if service worker file is succesfully located
           console.log("service worker file found", reg);
         });
       });
