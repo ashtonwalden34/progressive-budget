@@ -56,6 +56,7 @@ self.addEventListener("activate", function(evt) {
               // stores request in cache if succesful
               if (response.status === 200) {
                 cache.put(evt.request.url, response.clone());
+                console.log("cached: " + response);
               }
               return response;
             })
