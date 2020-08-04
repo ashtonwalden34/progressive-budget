@@ -1,13 +1,14 @@
-console.log("service worker hit!!")
+// console.log("service worker hit!!")
 
 // variable to hold files being cached
 const FILES_TO_CACHE = [
     "/",
     "/index.html",
     "/index.js",
-    "/style.css", 
+    "/db.js",
+    // "/style.css", 
     "/icons/icon-192x192.png",
-    "/icons/icon-512x512.png"
+    "/icons/icon-512x512.png",
 ];
 
 // names for caches
@@ -48,6 +49,7 @@ self.addEventListener("activate", function(evt) {
   self.addEventListener("fetch", function(evt) {
     // if the request includes the route "/api/"
     if (evt.request.url.includes("/api/")) {
+    console.log("fethcing request")
       evt.respondWith(
           // function opens the data cache
         caches.open(DATA_CACHE_NAME).then(cache => {
