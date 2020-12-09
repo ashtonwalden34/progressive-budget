@@ -18,8 +18,8 @@ This application allows the user to track their finances whether they have an in
 
 
 # Links
-GitHub Repository: https://github.com/ashtonwalden34/progressive-budget
-Deployed application: https://offlineofflinetracker.herokuapp.com/
+- GitHub Repository: https://github.com/ashtonwalden34/progressive-budget
+- Deployed application: https://offlineofflinetracker.herokuapp.com/
 
 # Road Map
 - Mobile responsive clean design
